@@ -7,4 +7,4 @@ FROM alpine:latest
 RUN apk --no-cache add ca-certificates
 WORKDIR /
 COPY --from=builder /go/src/github.com/percona/rds_exporter/rds_exporter .
-ENTRYPOINT ["./rds_exporter", "--config.file=/rds_exporter/config.yml"]
+ENTRYPOINT ["./rds_exporter", "--config.file=/rds-exporter-config/config.yml"]
